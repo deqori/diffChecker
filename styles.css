@@ -1,0 +1,82 @@
+body {
+  background: #f6f8fa;
+}
+.container {
+  margin-bottom: 1em;
+}
+.column {
+  width: 50%;
+  background: white;
+  border: 1px solid #d0d7de;
+  /* Ensure columns have consistent height */
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+}
+
+.line {
+  display: flex;
+  white-space: pre;
+  border-bottom: 1px solid #e1e4e8;
+  padding: .5em;
+  min-height: 3em; /* Ensure minimum height for empty lines */
+  /* Ensure lines expand to fill available space */
+  flex: 0 0 auto;
+}
+
+.line.added {
+  background-color: #e6ffed;
+}
+
+.line.removed {
+  background-color: #ffeef0;
+}
+
+.line.empty {
+  background-color: #f6f8fa;
+  color: #999;
+}
+
+.line-number {
+  width: 40px;
+  color: #999;
+  text-align: right;
+  padding-right: 10px;
+  user-select: none;
+  flex-shrink: 0; /* Prevent line numbers from shrinking */
+}
+
+.line-content {
+  flex: 1;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word; /* Force break on long words */
+  /* Ensure consistent alignment */
+  display: block;
+}
+
+/***** Words colors *****/
+
+.word-added {
+  background-color: #acf2bd;
+  padding: 1px 4px;
+  border-radius: 6px;
+}
+
+.word-removed {
+  background-color: #fdb8c0;
+  padding: 1px 4px;
+  border-radius: 6px;
+}
+
+/* Improve diff container layout */
+#diff {
+  display: flex !important;
+  gap: 1em !important;
+  align-items: stretch; /* Ensure columns have same height */
+}

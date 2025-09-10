@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- v.1.0 https://github.com/deqori -->
+    <meta charset="UTF-8">
+    <title>Simple diff Checker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container-full">
+      <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <span class="header">
+        <span style="color: palevioletred; font-weight: bold;">Diff Checker</span>
+        <small><small style="color:#EEE"> - No datas collected, 100% anonym for internal or external uses</small></small>
+        </span>
+      </nav>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Simple and anonym diff checker</h1>
+          <small>
+            <p>Why? because many of the different checking tools are collecting your datas.<br>
+              You can inspect the code, view page code, or save this page on your PC <b>(Ctrl + s / Cmd + s)</b> to run it offline, to make sure there is no data collected.
+            </p>
+          </small>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <textarea id="leftInput" class="form-control" placeholder="Original text" rows="7"></textarea>
+        </div>
+        <div class="col-6">
+          <textarea id="rightInput" class="form-control" placeholder="Other text" rows="7"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <button onclick="generateDiff()" type="button" class="btn btn-dark">Compare</button>
+        </div>
+      </div>
+    </div>
+    <div id="diff" class="container" style="display: flex; gap: 1em;"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
